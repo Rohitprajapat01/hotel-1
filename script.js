@@ -2,42 +2,42 @@
 const GITHUB_PAGES_BASE_PATH = '/hotel-1/';
 const galleryImages = [
     {
-        url: '3.JPG',
+        url: '3.jpg',
         title: 'Hotel Exterior',
         category: 'Exterior'
     },
     {
-        url: '2.JPG',
+        url: '2.jpg',
         title: 'Luxury Suite',
         category: 'Rooms'
     },
     {
-        url: '1.JPG',
+        url: '1.jpg',
         title: 'Presidential Suite',
         category: 'Rooms'
     },
     {
-        url: '4.JPG',
+        url: '4.jpg',
         title: 'Deluxe Room',
         category: 'Rooms'
     },
     {
-        url: '5.JPG',
+        url: '5.jpg',
         title: 'Hotel Lobby',
         category: 'Interior'
     },
     {
-        url: '6.JPG',
+        url: '6.jpg',
         title: 'Swimming Pool',
         category: 'Amenities'
     },
     {
-        url: '7.JPG',
+        url: '7.jpg',
         title: 'Restaurant',
         category: 'Dining'
     },
     {
-        url: '8.JPG',
+        url: '8.jpg',
         title: 'Spa',
         category: 'Amenities'
     }
