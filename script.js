@@ -1,22 +1,22 @@
 // Gallery images data
 const galleryImages = [
     {
-        url: '3.jpg=1200',
+        url: '3.jpg',
         title: 'Hotel Exterior',
         category: 'Exterior'
     },
     {
-        url: '2.jpg=1200',
+        url: '2.jpg',
         title: 'Luxury Suite',
         category: 'Rooms'
     },
     {
-        url: '1.jpg=1200',
+        url: '1.jpg',
         title: 'Presidential Suite',
         category: 'Rooms'
     },
     {
-        url: '4.jpg=1200',
+        url: '4.jpg',
         title: 'Deluxe Room',
         category: 'Rooms'
     },
