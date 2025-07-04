@@ -1,4 +1,5 @@
 // Gallery images data
+const GITHUB_PAGES_BASE_PATH = '/hotel-1/';
 const galleryImages = [
     {
         url: '3.jpg',
