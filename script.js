@@ -6,12 +6,12 @@ const galleryImages = [
         category: 'Exterior'
     },
     {
-        url: '1.webp',
+        url: '1.webp=1200',
         title: 'Luxury Suite',
         category: 'Rooms'
     },
     {
-        url: '2.webp',
+        url: '2.webp=1200',
         title: 'Presidential Suite',
         category: 'Rooms'
     },
