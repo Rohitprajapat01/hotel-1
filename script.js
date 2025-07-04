@@ -21,22 +21,22 @@ const galleryImages = [
         category: 'Rooms'
     },
     {
-        url: 'https://images.pexels.com/photos/1024248/pexels-photo-1024248.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        url: '5.jpg',
         title: 'Hotel Lobby',
         category: 'Interior'
     },
     {
-        url: 'https://images.pexels.com/photos/2096983/pexels-photo-2096983.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        url: '6.jpg',
         title: 'Swimming Pool',
         category: 'Amenities'
     },
     {
-        url: 'https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        url: '7.jpg',
         title: 'Restaurant',
         category: 'Dining'
     },
     {
-        url: 'https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        url: '8.jpg',
         title: 'Spa',
         category: 'Amenities'
     }
