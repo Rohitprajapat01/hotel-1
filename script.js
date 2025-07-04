@@ -1,43 +1,46 @@
 // Gallery images data
-const GITHUB_PAGES_BASE_PATH = '/hotel-1/';
+// IMPORTANT: If deploying to GitHub Pages in a subdirectory, ensure GITHUB_PAGES_BASE_PATH is correct
+// and apply it to your HTML image src attributes as well.
+const GITHUB_PAGES_BASE_PATH = '/hotel-1/'; // Adjust this if your project is in a different subdirectory
+
 const galleryImages = [
     {
-        url: '3.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}3.jpg`,
         title: 'Hotel Exterior',
         category: 'Exterior'
     },
     {
-        url: '2.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}2.jpg`,
         title: 'Luxury Suite',
         category: 'Rooms'
     },
     {
-        url: '1.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}1.jpg`,
         title: 'Presidential Suite',
         category: 'Rooms'
     },
     {
-        url: '4.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}4.jpg`,
         title: 'Deluxe Room',
         category: 'Rooms'
     },
     {
-        url: '5.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}5.jpg`,
         title: 'Hotel Lobby',
         category: 'Interior'
     },
     {
-        url: '6.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}6.jpg`,
         title: 'Swimming Pool',
         category: 'Amenities'
     },
     {
-        url: '7.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}7.jpg`,
         title: 'Restaurant',
         category: 'Dining'
     },
     {
-        url: '8.jpg',
+        url: `${GITHUB_PAGES_BASE_PATH}8.jpg`,
         title: 'Spa',
         category: 'Amenities'
     }
@@ -67,7 +70,7 @@ mobileMenuBtn.addEventListener('click', () => {
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
-        element.scrollIntoView({ 
+        element.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
@@ -80,7 +83,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
         e.preventDefault();
         const targetId = link.getAttribute('href').substring(1);
         scrollToSection(targetId);
-        nav.classList.remove('show');
+        nav.classList.remove('show'); // Close mobile menu after clicking a link
     });
 });
 
@@ -101,25 +104,25 @@ floatingBtn.addEventListener('click', () => {
 });
 
 // Gallery modal functions
+const galleryModal = document.getElementById('galleryModal');
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalCategory = document.getElementById('modalCategory');
+
 function openModal(index) {
     currentImageIndex = index;
-    const modal = document.getElementById('galleryModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalCategory = document.getElementById('modalCategory');
-    
+
     modalImage.src = galleryImages[index].url;
     modalTitle.textContent = galleryImages[index].title;
     modalCategory.textContent = galleryImages[index].category;
-    
-    modal.classList.add('show');
-    document.body.style.overflow = 'hidden';
+
+    galleryModal.classList.add('show');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
 }
 
 function closeModal() {
-    const modal = document.getElementById('galleryModal');
-    modal.classList.remove('show');
-    document.body.style.overflow = 'auto';
+    galleryModal.classList.remove('show');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
 }
 
 function nextImage() {
@@ -133,16 +136,15 @@ function prevImage() {
 }
 
 // Close modal when clicking outside
-document.getElementById('galleryModal').addEventListener('click', (e) => {
-    if (e.target.id === 'galleryModal') {
+galleryModal.addEventListener('click', (e) => {
+    if (e.target === galleryModal) { // Check if the click is directly on the modal background
         closeModal();
     }
 });
 
 // Keyboard navigation for modal
 document.addEventListener('keydown', (e) => {
-    const modal = document.getElementById('galleryModal');
-    if (modal.classList.contains('show')) {
+    if (galleryModal.classList.contains('show')) {
         if (e.key === 'Escape') {
             closeModal();
         } else if (e.key === 'ArrowRight') {
@@ -153,70 +155,43 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Intersection Observer for animations
+// Intersection Observer for animations (sections and cards)
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1, // Trigger when 10% of the element is visible
+    rootMargin: '0px 0px -50px 0px' // Start observing 50px before the viewport bottom
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('revealed'); // Add a class to trigger CSS animation
+            observer.unobserve(entry.target); // Stop observing once animated
         }
     });
 }, observerOptions);
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.room-card, .gallery-item, .info-card, .contact-card, .booking-card');
-    
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    // Select all sections and animated cards
+    const elementsToAnimate = document.querySelectorAll(
+        'section, .room-card, .gallery-item, .info-card, .contact-card, .booking-card'
+    );
+
+    elementsToAnimate.forEach(el => {
+        // Initial state for animation (handled by CSS, but ensure no 'revealed' class initially)
+        el.classList.remove('revealed');
         observer.observe(el);
     });
+
+    // Preload gallery images for better performance, only when needed
+    preloadGalleryImages();
 });
 
-// Preload images for better performance
-function preloadImages() {
+// Preload images for better performance in the gallery
+function preloadGalleryImages() {
     galleryImages.forEach(image => {
         const img = new Image();
         img.src = image.url;
+        // Optionally, add a small fade-in once loaded if needed for specific large images
     });
 }
-
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    preloadImages();
-    
-    // Add loading animation to images
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        img.addEventListener('load', () => {
-            img.style.opacity = '1';
-        });
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
-    });
-});
-
-// Smooth reveal animation for sections
-const revealSections = () => {
-    const sections = document.querySelectorAll('section');
-    const windowHeight = window.innerHeight;
-    
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const revealPoint = 150;
-        
-        if (sectionTop < windowHeight - revealPoint) {
-            section.classList.add('revealed');
-        }
-    });
-};
-
-window.addEventListener('scroll', revealSections);
-document.addEventListener('DOMContentLoaded', revealSections);
