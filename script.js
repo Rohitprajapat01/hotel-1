@@ -6,12 +6,12 @@ const galleryImages = [
         category: 'Exterior'
     },
     {
-        url: '1.webp=1200',
+        url: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1200',
         title: 'Luxury Suite',
         category: 'Rooms'
     },
     {
-        url: '2.webp=1200',
+        url: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
         title: 'Presidential Suite',
         category: 'Rooms'
     },
