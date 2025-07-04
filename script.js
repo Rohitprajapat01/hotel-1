@@ -1,17 +1,17 @@
 // Gallery images data
 const galleryImages = [
     {
-        url: '1.webp',
+        url: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200',
         title: 'Hotel Exterior',
         category: 'Exterior'
     },
     {
-        url: '2.webp',
+        url: '1.webp',
         title: 'Luxury Suite',
         category: 'Rooms'
     },
     {
-        url: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        url: '2.webp',
         title: 'Presidential Suite',
         category: 'Rooms'
     },
