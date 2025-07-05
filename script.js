@@ -23,7 +23,7 @@ const galleryImages = [
         category: 'Rooms'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}5.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}deluxe.jpeg`,
         title: 'Hotel Lobby',
         category: 'Interior'
     },
