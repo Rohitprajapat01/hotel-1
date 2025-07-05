@@ -1,26 +1,24 @@
-// Gallery images data
-// IMPORTANT: If deploying to GitHub Pages in a subdirectory, ensure GITHUB_PAGES_BASE_PATH is correct
-// and apply it to your HTML image src attributes as well.
+
 const GITHUB_PAGES_BASE_PATH = '/hotel-1/'; // Adjust this if your project is in a different subdirectory
 
 const galleryImages = [
     {
-        url: `${GITHUB_PAGES_BASE_PATH}3.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}12.jpg`,
         title: 'Hotel Exterior',
         category: 'Exterior'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}2.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}11.jpg`,
         title: 'Luxury Suite',
         category: 'Rooms'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}1.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}fttemple.jpg`,
         title: 'Presidential Suite',
         category: 'Rooms'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}4.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}13.jpg`,
         title: 'Deluxe Room',
         category: 'Rooms'
     },
@@ -30,17 +28,17 @@ const galleryImages = [
         category: 'Interior'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}6.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}1bed.jpg`,
         title: 'Swimming Pool',
         category: 'Amenities'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}7.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}templeview.jpg`,
         title: 'Restaurant',
         category: 'Dining'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}8.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}3bed1.jpg`,
         title: 'Spa',
         category: 'Amenities'
     }
