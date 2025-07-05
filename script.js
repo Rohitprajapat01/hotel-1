@@ -28,7 +28,7 @@ const galleryImages = [
         category: 'Interior'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}1bed.jpg`,
+        url: `${GITHUB_PAGES_BASE_PATH}14.jpg`,
         title: 'Swimming Pool',
         category: 'Amenities'
     },
