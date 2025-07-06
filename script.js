@@ -5,42 +5,42 @@ const galleryImages = [
     {
         url: `${GITHUB_PAGES_BASE_PATH}12.jpg`,
         title: 'Hotel Exterior',
-        category: 'Exterior'
+        category: 'Garden'
     },
     {
         url: `${GITHUB_PAGES_BASE_PATH}11.jpg`,
-        title: 'Luxury Suite',
-        category: 'Rooms'
+        title: 'Nearby Places',
+        category: 'Temple'
     },
     {
         url: `${GITHUB_PAGES_BASE_PATH}fttemple.jpg`,
-        title: 'Presidential Suite',
-        category: 'Rooms'
+        title: 'Nearby Places',
+        category: 'Temple'
     },
     {
         url: `${GITHUB_PAGES_BASE_PATH}13.jpg`,
-        title: 'Deluxe Room',
+        title: 'Hotel Exterior',
+        category: 'Exterior'
+    },
+    {
+        url: `${GITHUB_PAGES_BASE_PATH}vip.jpg`,
+        title: 'Deluxe Suite',
         category: 'Rooms'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}deluxe.jpeg`,
-        title: 'Hotel Lobby',
-        category: 'Interior'
-    },
-    {
         url: `${GITHUB_PAGES_BASE_PATH}14.jpg`,
-        title: 'Swimming Pool',
+        title: 'Garden',
         category: 'Amenities'
     },
     {
         url: `${GITHUB_PAGES_BASE_PATH}templeview.jpg`,
-        title: 'Restaurant',
-        category: 'Dining'
+        title: 'Nearby Attractions',
+        category: 'Temple'
     },
     {
-        url: `${GITHUB_PAGES_BASE_PATH}3bed1.jpg`,
-        title: 'Spa',
-        category: 'Amenities'
+        url: `${GITHUB_PAGES_BASE_PATH}3bed.jpg`,
+        title: 'Family Suite',
+        category: 'Rooms'
     }
 ];
 
