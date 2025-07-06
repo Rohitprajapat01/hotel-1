@@ -248,10 +248,19 @@ html {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease 0.4s both;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: .5px rgb(255, 0, 0);
+    font-weight: bold;
+    
 
+}
+.hero-subtitle1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease 0.4s both;
 }
 
 .hero-description {
@@ -1126,3 +1135,8 @@ section {
         font-size: 1rem;
     }
 }
+
+
+
+
+
